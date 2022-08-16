@@ -2,9 +2,17 @@ import { BaseController } from './base.controller';
 
 export class PostController extends BaseController {
 
-  async getByUserId(userId: string) {
+  async getByPostId(postId: string | number) {
     return await this.request()
-      .url(`posts/${userId}`)
+      .method('GET')
+      .url(`posts/${postId}`)
+      .send();
+  }
+
+  async getAllComments(postId: string | number) {
+    return await this.request()
+      .method('GET')
+      .url(`posts/${postId}/comments`)
       .send();
   }
 }
