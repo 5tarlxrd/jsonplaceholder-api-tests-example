@@ -5,7 +5,7 @@ import { isValidJsonSchema } from '../framework/jsonSchemaValidator';
 
 const client = new ApiClient();
 
-describe('User: search by valid username', () => {
+describe('search user by valid username', () => {
   const userName = 'Delphine';
   let response: AxiosResponse<any, any>;
 
@@ -30,7 +30,7 @@ describe('User: search by valid username', () => {
   });
 });
 
-describe('User: search by invalid username', () => {
+describe('search user by invalid username', () => {
   const userName = `invalid-${randomstring.generate(4)}`;
   let response: AxiosResponse<any, any>;
 
