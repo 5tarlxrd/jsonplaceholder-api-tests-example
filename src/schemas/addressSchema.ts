@@ -13,5 +13,5 @@ export const addressSchema: JSONSchemaType<Address> = {
     geo: { $ref: 'geo.json' },
   },
   required: ['street', 'suite', 'city', 'zipcode', 'geo'],
-  additionalProperties: false
+  additionalProperties: false,
 };

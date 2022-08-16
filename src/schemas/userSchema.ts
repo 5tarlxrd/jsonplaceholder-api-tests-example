@@ -8,7 +8,7 @@ export const userSchema: JSONSchemaType<User> = {
     id: { type: ['integer', 'string'] },
     name: { type: 'string' },
     username: { type: 'string' },
-    email: { type: 'string' },
+    email: { type: 'string', format: 'email' },
     address:  { $ref: 'address.json' },
     phone: { type: 'string' },
     website: { type: 'string' },
